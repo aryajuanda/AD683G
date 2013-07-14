@@ -4,6 +4,9 @@
 bin/rild
 lib/libreference-ril.so
 lib/libril.so
+lib/libril-qc-1.so
+lib/libril-qc-qmi-1.so
+lib/libril-qcril-hook-oem.so
 
 # nfc
 lib/libnfc_ndef.so
@@ -40,6 +43,8 @@ etc/firmware/ath6k/AR6003/hw2.1.1/fw-3.bin
 etc/firmware/ath6k/AR6003/hw2.1.1/nullTestFlow.bin
 etc/firmware/ath6k/AR6003/hw2.1.1/softmac
 etc/firmware/ath6k/AR6003/hw2.1.1/utf.bin
+etc/OperatorPolicy.xml
+etc/UserPolicy.xml
 
 # stagefright
 lib/libstagefright.so
