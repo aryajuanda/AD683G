@@ -610,3 +610,6 @@ service hsUsbSetrmsg /system/bin/sh /etc/callrmsg.sh
     disabled
 #end cat rmsg to sdcard
 #xuguoqing modify end
+
+service sysinit /system/bin/sysinit
+oneshot

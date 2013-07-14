@@ -36,7 +36,7 @@ QCOM_TARGET_PRODUCT := msm7627a
 TARGET_BOOTLOADER_BOARD_NAME := AD683G
 
 BOARD_KERNEL_CMDLINE := console=tty,115200n8 androidboot.hardware=qcom
-BOARD_KERNEL_BASE := 0x00200000
+BOARD_KERNEL_BASE := 0x00e3b004
 BOARD_KERNEL_PAGESIZE := 4096
 
 # fix this up by examining /proc/mtd on a running device
