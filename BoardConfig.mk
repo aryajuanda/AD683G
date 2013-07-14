@@ -17,7 +17,11 @@
 
 # Skip droiddoc build to save build time
 BOARD_SKIP_ANDROID_DOC_BUILD := true
+
 USE_CAMERA_STUB := true
+
+# inherit from the proprietary version
+-include vendor/hisense/AD683G/BoardConfigVendor.mk
 
 TARGET_ARCH := arm
 TARGET_NO_BOOTLOADER := true
@@ -26,6 +30,8 @@ TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_ARCH_VARIANT := armv7-a-neon
 ARCH_ARM_HAVE_TLS_REGISTER := true
+TARGET_BOARD_PLATFORM_GPU := qcom
+QCOM_TARGET_PRODUCT := msm7627a
 
 TARGET_BOOTLOADER_BOARD_NAME := AD683G
 
@@ -34,22 +40,26 @@ BOARD_KERNEL_BASE := 0x00200000
 BOARD_KERNEL_PAGESIZE := 4096
 
 # fix this up by examining /proc/mtd on a running device
-# Boot image size is 18480 x 512 bytes = 9461760
 # You can double check it with fdisk -l /dev/block/mmcblk0p8
-#BOARD_BOOTIMAGE_PARTITION_SIZE     := 9461760
-# Recovery image size is 20480 x 512 bytes = 10485760
+BOARD_BOOTIMAGE_PARTITION_SIZE     := 0x00018480
+
 # You can double check it with fdisk -l /dev/block/mmcblk0p16
-#BOARD_RECOVERYIMAGE_PARTITION_SIZE := 10485760
-# System image size is 700000 x 512 bytes = 358400000
+BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0x00020480
+
 # You can double check it with fdisk -l /dev/block/mmcblk0p12
-#BOARD_SYSTEMIMAGE_PARTITION_SIZE   := 358400000
-# User data image size is 4280000 x 512 bytes = 2191360000
+BOARD_SYSTEMIMAGE_PARTITION_SIZE   := 0x00700000
+
 # You can double check it with fdisk -l /dev/block/mmcblk0p13
-#BOARD_USERDATAIMAGE_PARTITION_SIZE := 2191360000
-#BOARD_FLASH_BLOCK_SIZE := 262144 # (BOARD_KERNEL_PAGESIZE * 64)
+BOARD_USERDATAIMAGE_PARTITION_SIZE := 0x04280000
+
+BOARD_FLASH_BLOCK_SIZE := 262144 # (BOARD_KERNEL_PAGESIZE * 64)
 
 # EGL settings
 BOARD_EGL_CFG := device/hisense/AD683G/configs/egl.cfg
+
+TARGET_PROVIDES_LIBAUDIO := true
+TARGET_PROVIDES_LIBLIGHTS := true
+TARGET_LIBAGL_USE_GRALLOC_COPYBITS := true
 
 # BT
 BOARD_HAVE_BLUETOOTH := true

@@ -26,6 +26,7 @@ lib/libsensorservice.so
 
 # sound
 lib/libsoundpool.so
+etc/AudioFilter.csv
 
 # egl
 lib/egl/libEGL_adreno200.so
@@ -70,9 +71,48 @@ lib/hw/audio.primary.msm7627a.so
 lib/hw/audio_policy.default.so
 lib/hw/audio_policy.msm7627a.so
 lib/hw/camera.msm7627a.so
+lib/hw/copybit.msm7627a.so
 lib/hw/gps.default.so
+lib/hw/gralloc.default.so
 lib/hw/gralloc.msm7627a.so
 lib/hw/hwcomposer.msm7627a.so
 lib/hw/lights.msm7627a.so
 lib/hw/sensors.default.so
+bin/qmuxd
 
+#
+lib/libgsl.so
+lib/liboncrpc.so
+lib/libdsm.so
+lib/libqueue.so
+lib/libcm.so
+lib/libdiag.so
+lib/libmmgsdilib.so
+lib/libgsdi_exp.so
+lib/libgstk_exp.so
+lib/libwms.so
+lib/libnv.so
+lib/libwmsts.so
+lib/libpbmlib.so
+lib/libdss.so
+lib/libqmi.so
+lib/liboem_rapi.so
+lib/libmmjpeg.so
+lib/libmmipl.so
+lib/libmm-adspsvc.so
+lib/libOmxH264Dec.so
+lib/libOmxMpeg4Dec.so
+lib/libOmxVidEnc.so
+lib/libOmxWmvDec.so
+etc/init.qcom.bt.sh
+bin/hci_qcomm_init
+lib/hw/sensors.default.so
+lib/libauth.so
+lib/libqmi.so
+lib/libdsutils.so
+lib/libqmiservices.so
+lib/libidl.so
+lib/libdsi_netctrl.so
+lib/libnetmgr.so
+lib/libqdp.so
+lib/libaudioeq.so
